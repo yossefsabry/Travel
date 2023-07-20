@@ -86,4 +86,35 @@ button:hover {
   background-color: transparent;
   transition: var(--main-transtion);
 }
+
+.shape {
+  text-align: center;
+  display: block;
+  padding-top: 60px;
+  position: relative;
+}
+.shape::after {
+  content: '';
+  position: absolute;
+  width: 137px;
+  height: 2px;
+  background: black;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -16px;
+}
+.shape::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: black;
+  border-radius: 50%;
+  border: 8px solid white;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+  z-index: 3;
+
+}
 /* end element css */

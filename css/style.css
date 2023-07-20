@@ -5,8 +5,8 @@
 
 :root {
   --main-color: #0c150e;
-  --second-color: #000000bd;
-  --shapes-color: #027963d8;
+  --second-color: #011601c6;
+  --shapes-color: #008080;
   --text-color: #e3e3e3;
   --bg-color: rgb(28, 30, 28);
   --grey-color: #77777721;
@@ -14,6 +14,10 @@
   --padding-bottom: 60px;
   --main-transtion: all 0.3s;
 }
+
+body {
+  height: 2000px;
+letter-spacing: ;}
 
 /* end root  */
 header {
@@ -141,7 +145,6 @@ header .bar div::before {
 }
 /* end header */
 /* start hero */
-
 .hero {
   width: 100%;
   height: calc(100vh - 70px);
@@ -174,5 +177,69 @@ header .bar div::before {
   margin-bottom: 3rem;
   font-size: 1.1rem;
 }
-
 /* end hero */
+/* start category */
+.category {
+  width: 100%;
+  position: relative;
+}
+.category .container {
+  width: 100%;
+  padding: 10rem 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 50px;
+}
+
+.category .card {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.202);
+  border-radius: 10px;
+  max-width: 100%;
+  width: 100%;
+}
+.card .img {
+ width: 100%;
+ height: 100%;
+}
+.card img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 300px;
+  height: 350px;
+}
+.card .detalis {
+  padding: 20px 5px;
+}
+.card span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.card p {
+  padding: 25px 0px;
+  line-height: 1.5rem;
+}
+.card button:hover {
+  border: 1px solid var(--second-color);
+  background-color: transparent;
+  color: var(--second-color);
+}
+@media (max-width:1366px) {
+  .category .container {
+    padding: 10rem 4rem;
+  }
+}
+@media (max-width:776px) {
+  .category .container {
+    padding: 10rem 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  .category .card {
+    flex-direction: column;
+  }
+}
+/* end category */
